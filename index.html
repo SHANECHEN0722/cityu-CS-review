@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityU 课程资料库</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://onlyoffice.github.io/demo-docs/files/doceditor.js"></script>
+    <link rel="stylesheet" href="style.css?v=20251212a">
+</head>
+<body>
+    <!-- 3D 背景容器 -->
+    <div id="canvas-container"></div>
+    <!-- 背景遮罩 -->
+    <div class="header-overlay"></div>
+    
+    <div id="listView" class="container">
+        <header>
+            <h1 class="review-title">
+                CityU <span class="highlight">课程资料库</span>
+            </h1>
+
+
+            <p class="subtitle">香港城市大学专业复习资料</p>
+            <p class="course-count">收录了 <span id="courseCount">0</span> 门课程</p>
+        </header>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="🔍 搜索课程代码或课程名称..."
+            >
+            <a
+                id="repoButton"
+                class="repo-btn"
+                href="https://github.com/SHANECHEN0722/cityu-review-template"
+                target="_blank"
+                rel="noopener noreferrer"
+            >前往GitHub仓库</a>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+            <div class="no-results">
+                <span class="emoji">⏳</span>
+                <p>正在加载课程数据...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="detailView" class="container">
+        <div class="detail-container">
+            <div id="courseDetail"></div>
+        </div>
+    </div>
+
+    <footer id="footerView">
+        <p>💡 点击「查看详情」可进入课程资料</p>
+    </footer>
+
+    <script src="script.js?v=20251212a"></script>
+</body>
+</html>
