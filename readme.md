@@ -89,7 +89,7 @@ cityu-CS-review/
 
 遇到问题？
 
-- 📖 查看 [CityU Review Hub](https://github.com/SHANECHEN0722/Cityu-Review)
+- 📖 查看 [模板仓库](https://github.com/SHANECHEN0722/cityu-review-template)
 - 💬 在 [Issues](https://github.com/SHANECHEN0722/cityu-CS-review/issues) 提问
 - 🌐 访问 [导航网站](https://shanechen0722.github.io/Cityu-Review/)
 <p align="right"><a href="#readme-top">回到顶部</a></p>
