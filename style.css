@@ -27,19 +27,34 @@
     display: none !important;
 }
 
+html {
+    min-height: 100%;
+    background-color: #0f0f1e;
+}
+
 body {
-    background: 
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
         radial-gradient(circle at 20% 50%, rgba(133, 0, 41, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(50, 20, 100, 0.25) 0%, transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(20, 80, 150, 0.2) 0%, transparent 50%),
         linear-gradient(135deg, #0f0f1e 0%, #1a0a15 40%, #0a1520 100%);
-    background-attachment: fixed;
-    color: var(--text-primary);
-    font-family: var(--font-sans);
-    min-height: 100vh;
-    padding: 20px;
-    overflow-x: hidden;
-    position: relative;
+    z-index: -10;
+    pointer-events: none;
 }
 
 /* 3D 背景容器 */
