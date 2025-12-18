@@ -90,6 +90,7 @@ body::before {
 .container {
     max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
@@ -381,6 +382,8 @@ header h1 {
     padding: 40px;
     max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
@@ -415,6 +418,9 @@ header h1 {
     grid-template-columns: minmax(520px, 1.8fr) minmax(320px, 1fr);
     gap: 24px;
     align-items: start;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .course-panel {
@@ -422,6 +428,7 @@ header h1 {
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     padding: 18px 20px;
+    min-width: 0;
 }
 
 .course-panel h2 {
@@ -470,6 +477,7 @@ header h1 {
     width: 100%;
     border-collapse: collapse;
     margin: 16px 0;
+    table-layout: fixed;
 }
 
 .course-html thead th {
@@ -483,6 +491,8 @@ header h1 {
     padding: 12px 14px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .course-html tbody tr:hover {
@@ -509,6 +519,23 @@ header h1 {
 .course-html h3 {
     font-size: 1.2rem;
     margin: 16px 0 8px;
+}
+
+.course-html {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.course-html img,
+.course-html video,
+.course-html iframe {
+    max-width: 100%;
+}
+
+.course-html pre {
+    max-width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* 预览弹窗 */
@@ -774,6 +801,7 @@ body.modal-open {
     margin: 4px 0;
     border-radius: 8px;
     transition: background 0.2s;
+    min-width: 0;
 }
 
 .file-item:hover {
@@ -787,6 +815,9 @@ body.modal-open {
     display: flex;
     align-items: center;
     gap: 8px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .file-link:hover {
