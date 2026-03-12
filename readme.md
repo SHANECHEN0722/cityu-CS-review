@@ -9,7 +9,7 @@
     <a href="https://shanechen0722.github.io/cityu-CS-review/"><img src="https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github" alt="GitHub Pages"></a>
     <a href="mailto:dieael_chenxian@163.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
     <h1 align="center">For CityU CS</h1>
-    为香港城市大学学生设计的标准化复习资料仓库模板，快速开始建设你的专业资源库。
+    为香港城市大学计算机科学学生构建的标复习资料仓库。
 
 [😊 在线访问](https://shanechen0722.github.io/cityu-CS-review/) · [🤝 参与贡献](#-参与贡献) · [💡 获取帮助](https://github.com/SHANECHEN0722/cityu-CS-review/issues)
 </p>
