@@ -1,0 +1,301 @@
+[2026-03-29 19:22:29] [INFO] Command executed: eval_3dmatch.py --benchmark 3DMatch_planar --method lgr --verbose
+[2026-03-29 19:22:29] [INFO] Configs:
+{
+    "dir": {
+        "output_folder_name": "outputs",
+        "exp_name": "3DMatch"
+    },
+    "seed": 7351,
+    "data": {
+        "dataset_root": "data/3DMatch"
+    },
+    "test": {
+        "batch_size": 1,
+        "num_workers": 8,
+        "point_limit": null
+    },
+    "eval": {
+        "acceptance_overlap": 0.0,
+        "acceptance_radius": 0.1,
+        "inlier_ratio_threshold": 0.05,
+        "rmse_threshold": 0.2,
+        "rre_threshold": 15.0,
+        "rte_threshold": 0.3
+    },
+    "ransac": {
+        "distance_threshold": 0.05,
+        "num_points": 3,
+        "num_iterations": 50000
+    },
+    "kpconv": {
+        "num_stages": 4,
+        "init_voxel_size": 0.025,
+        "kernel_size": 15,
+        "base_radius": 2.5,
+        "base_sigma": 2.0,
+        "group_norm": 32,
+        "input_dim": 129,
+        "init_dim": 256,
+        "output_dim": 256,
+        "init_radius": 0.0625,
+        "init_sigma": 0.05
+    },
+    "model": {
+        "ground_truth_matching_radius": 0.05,
+        "num_points_in_patch": 64,
+        "num_sinkhorn_iterations": 100
+    },
+    "coarse_matching": {
+        "num_targets": 128,
+        "overlap_threshold": 0.1,
+        "num_correspondences": 256,
+        "dual_normalization": true
+    },
+    "geotrans": {
+        "input_dim": 4096,
+        "hidden_dim": 256,
+        "output_dim": 256,
+        "num_heads": 4,
+        "blocks": [
+            "self",
+            "cross",
+            "self",
+            "cross",
+            "self",
+            "cross"
+        ],
+        "sigma_d": 0.2,
+        "sigma_a": 15,
+        "angle_k": 3,
+        "reduction_a": "max"
+    },
+    "fine_matching": {
+        "topk": 3,
+        "acceptance_radius": 0.1,
+        "mutual": true,
+        "confidence_threshold": 0.05,
+        "use_dustbin": false,
+        "use_global_score": false,
+        "correspondence_threshold": 3,
+        "correspondence_limit": null,
+        "num_refinement_steps": 5
+    },
+    "root_dir": "/data/xichen/cg/CoFF",
+    "output_dir": "/data/xichen/cg/CoFF/outputs/3DMatch",
+    "log_dir": "/data/xichen/cg/CoFF/outputs/3DMatch/logs",
+    "feature_dir": "/data/xichen/cg/CoFF/outputs/3DMatch/features",
+    "registration_dir": "/data/xichen/cg/CoFF/outputs/3DMatch/registration"
+}
+[2026-03-29 19:22:29] [INFO] Kitchen, id0: 13, id1: 45, OV: 0.256, c_PIR: 0.840, f_IR: 0.714, f_OV: 0.985, f_RS: 0.084, f_NU: 4091, r_RMSE: 0.056, r_RRE: 4.105, r_RTE: 0.096
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 14, id1: 59, OV: 0.203, c_PIR: 0.555, f_IR: 0.328, f_OV: 0.944, f_RS: 0.147, f_NU: 4699, r_RMSE: 0.090, r_RRE: 2.502, r_RTE: 0.087
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 31, id1: 33, OV: 0.202, c_PIR: 0.273, f_IR: 0.093, f_OV: 0.831, f_RS: 0.240, f_NU: 3802, r_RMSE: 0.114, r_RRE: 4.541, r_RTE: 0.121
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 32, id1: 33, OV: 0.488, c_PIR: 0.750, f_IR: 0.368, f_OV: 0.960, f_RS: 0.135, f_NU: 4770
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 46, id1: 47, OV: 0.638, c_PIR: 0.906, f_IR: 0.853, f_OV: 0.998, f_RS: 0.062, f_NU: 5000
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 46, id1: 48, OV: 0.443, c_PIR: 0.801, f_IR: 0.718, f_OV: 0.986, f_RS: 0.082, f_NU: 4369, r_RMSE: 0.024, r_RRE: 1.670, r_RTE: 0.017
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 46, id1: 49, OV: 0.283, c_PIR: 0.664, f_IR: 0.579, f_OV: 0.971, f_RS: 0.112, f_NU: 3840, r_RMSE: 0.052, r_RRE: 2.624, r_RTE: 0.047
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 46, id1: 50, OV: 0.299, c_PIR: 0.703, f_IR: 0.668, f_OV: 0.972, f_RS: 0.093, f_NU: 3801, r_RMSE: 0.042, r_RRE: 1.691, r_RTE: 0.048
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 46, id1: 51, OV: 0.292, c_PIR: 0.660, f_IR: 0.696, f_OV: 0.975, f_RS: 0.090, f_NU: 3362, r_RMSE: 0.035, r_RRE: 1.613, r_RTE: 0.045
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 46, id1: 52, OV: 0.282, c_PIR: 0.703, f_IR: 0.671, f_OV: 0.984, f_RS: 0.094, f_NU: 3840, r_RMSE: 0.037, r_RRE: 1.970, r_RTE: 0.045
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 47, id1: 48, OV: 0.748, c_PIR: 0.922, f_IR: 0.913, f_OV: 0.994, f_RS: 0.053, f_NU: 5000
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 47, id1: 49, OV: 0.531, c_PIR: 0.852, f_IR: 0.810, f_OV: 0.991, f_RS: 0.071, f_NU: 4749, r_RMSE: 0.027, r_RRE: 2.091, r_RTE: 0.023
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 47, id1: 51, OV: 0.353, c_PIR: 0.746, f_IR: 0.736, f_OV: 0.957, f_RS: 0.080, f_NU: 3776, r_RMSE: 0.014, r_RRE: 2.071, r_RTE: 0.024
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 48, id1: 49, OV: 0.772, c_PIR: 0.953, f_IR: 0.929, f_OV: 0.997, f_RS: 0.050, f_NU: 5000
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 48, id1: 51, OV: 0.331, c_PIR: 0.707, f_IR: 0.780, f_OV: 0.967, f_RS: 0.073, f_NU: 3665, r_RMSE: 0.010, r_RRE: 2.111, r_RTE: 0.023
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 48, id1: 54, OV: 0.087, c_PIR: 0.570, f_IR: 0.371, f_OV: 0.970, f_RS: 0.130, f_NU: 3777, r_RMSE: 0.090, r_RRE: 2.363, r_RTE: 0.097
+[2026-03-29 19:22:30] [INFO] Kitchen, id0: 49, id1: 54, OV: 0.114, c_PIR: 0.668, f_IR: 0.428, f_OV: 0.978, f_RS: 0.120, f_NU: 3784, r_RMSE: 0.086, r_RRE: 2.000, r_RTE: 0.093
+[2026-03-29 19:22:31] [INFO] Kitchen, id0: 49, id1: 59, OV: 0.084, c_PIR: 0.207, f_IR: 0.092, f_OV: 0.937, f_RS: 0.351, f_NU: 3153, r_RMSE: 0.325
+[2026-03-29 19:22:31] [INFO] Kitchen, id0: 50, id1: 51, OV: 0.509, c_PIR: 0.730, f_IR: 0.749, f_OV: 0.968, f_RS: 0.080, f_NU: 4079
+[2026-03-29 19:22:31] [INFO] Kitchen, id0: 50, id1: 54, OV: 0.068, c_PIR: 0.617, f_IR: 0.461, f_OV: 0.984, f_RS: 0.117, f_NU: 3522, r_RMSE: 0.079, r_RRE: 2.228, r_RTE: 0.087
+[2026-03-29 19:22:31] [INFO] Kitchen, id0: 51, id1: 53, OV: 0.148, c_PIR: 0.578, f_IR: 0.590, f_OV: 0.979, f_RS: 0.105, f_NU: 3495, r_RMSE: 0.041, r_RRE: 2.933, r_RTE: 0.052
+[2026-03-29 19:22:31] [INFO] Scene_name: 7-scenes-redkitchen
+[2026-03-29 19:22:31] [INFO]   Correspondence, , c_PIR: 0.686, c_PMR>0: 1.000, c_PMR>=0.1: 1.000, c_PMR>=0.3: 0.905, c_PMR>=0.5: 0.905, f_FMR: 1.000, f_IR: 0.598, f_OV: 0.968
+[2026-03-29 19:22:31] [INFO]   Registration, RR: 0.938, mean_RRE: 2.434, mean_RTE: 0.060, median_RRE: 2.111, median_RTE: 0.048
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 14, id1: 20, OV: 0.363, c_PIR: 0.941, f_IR: 0.867, f_OV: 0.991, f_RS: 0.062, f_NU: 5000, r_RMSE: 0.010, r_RRE: 1.155, r_RTE: 0.015
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 14, id1: 21, OV: 0.273, c_PIR: 0.891, f_IR: 0.731, f_OV: 0.978, f_RS: 0.085, f_NU: 4949, r_RMSE: 0.018, r_RRE: 0.872, r_RTE: 0.026
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 16, id1: 21, OV: 0.345, c_PIR: 0.930, f_IR: 0.749, f_OV: 0.986, f_RS: 0.078, f_NU: 4958, r_RMSE: 0.013, r_RRE: 0.831, r_RTE: 0.018
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 18, id1: 21, OV: 0.390, c_PIR: 0.887, f_IR: 0.705, f_OV: 0.990, f_RS: 0.083, f_NU: 5000, r_RMSE: 0.010, r_RRE: 1.978, r_RTE: 0.011
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 20, id1: 21, OV: 0.320, c_PIR: 0.711, f_IR: 0.629, f_OV: 0.985, f_RS: 0.099, f_NU: 4284
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 25, id1: 27, OV: 0.266, c_PIR: 0.797, f_IR: 0.640, f_OV: 0.983, f_RS: 0.100, f_NU: 5000, r_RMSE: 0.027, r_RRE: 2.141, r_RTE: 0.037
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 26, id1: 27, OV: 0.286, c_PIR: 0.914, f_IR: 0.696, f_OV: 0.992, f_RS: 0.083, f_NU: 5000
+[2026-03-29 19:22:31] [INFO] Home_1, id0: 27, id1: 28, OV: 0.336, c_PIR: 0.941, f_IR: 0.813, f_OV: 0.999, f_RS: 0.068, f_NU: 5000
+[2026-03-29 19:22:31] [INFO] Scene_name: sun3d-home_at-home_at_scan1_2013_jan_1
+[2026-03-29 19:22:31] [INFO]   Correspondence, , c_PIR: 0.876, c_PMR>0: 1.000, c_PMR>=0.1: 1.000, c_PMR>=0.3: 1.000, c_PMR>=0.5: 1.000, f_FMR: 1.000, f_IR: 0.729, f_OV: 0.988
+[2026-03-29 19:22:31] [INFO]   Registration, RR: 1.000, mean_RRE: 1.395, mean_RTE: 0.021, median_RRE: 1.155, median_RTE: 0.018
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 8, id1: 9, OV: 0.312, c_PIR: 0.824, f_IR: 0.591, f_OV: 0.956, f_RS: 0.107, f_NU: 5000
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 8, id1: 35, OV: 0.265, c_PIR: 0.539, f_IR: 0.242, f_OV: 0.946, f_RS: 0.243, f_NU: 4139, r_RMSE: 0.183, r_RRE: 2.784, r_RTE: 0.206
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 8, id1: 36, OV: 0.295, c_PIR: 0.109, f_IR: 0.047, f_OV: 0.680, f_RS: 0.422, f_NU: 4639, r_RMSE: 0.634
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 8, id1: 37, OV: 0.631, c_PIR: 0.988, f_IR: 0.779, f_OV: 0.998, f_RS: 0.071, f_NU: 5000, r_RMSE: 0.026, r_RRE: 0.741, r_RTE: 0.023
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 9, id1: 32, OV: 0.177, c_PIR: 0.844, f_IR: 0.632, f_OV: 0.974, f_RS: 0.094, f_NU: 4160, r_RMSE: 0.059, r_RRE: 0.926, r_RTE: 0.065
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 9, id1: 33, OV: 0.211, c_PIR: 0.660, f_IR: 0.311, f_OV: 0.924, f_RS: 0.135, f_NU: 3766, r_RMSE: 0.224
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 9, id1: 35, OV: 0.419, c_PIR: 0.730, f_IR: 0.450, f_OV: 0.991, f_RS: 0.117, f_NU: 5000, r_RMSE: 0.112, r_RRE: 0.892, r_RTE: 0.120
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 9, id1: 36, OV: 0.456, c_PIR: 0.906, f_IR: 0.715, f_OV: 0.992, f_RS: 0.082, f_NU: 5000, r_RMSE: 0.025, r_RRE: 2.126, r_RTE: 0.016
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 9, id1: 37, OV: 0.275, c_PIR: 0.879, f_IR: 0.805, f_OV: 0.999, f_RS: 0.072, f_NU: 4865, r_RMSE: 0.005, r_RRE: 1.068, r_RTE: 0.016
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 10, id1: 32, OV: 0.177, c_PIR: 0.672, f_IR: 0.396, f_OV: 0.933, f_RS: 0.122, f_NU: 3700, r_RMSE: 0.135, r_RRE: 2.362, r_RTE: 0.140
+[2026-03-29 19:22:31] [INFO] Home_2, id0: 10, id1: 33, OV: 0.157, c_PIR: 0.453, f_IR: 0.145, f_OV: 0.889, f_RS: 0.177, f_NU: 3507, r_RMSE: 0.258
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 10, id1: 35, OV: 0.229, c_PIR: 0.648, f_IR: 0.268, f_OV: 0.978, f_RS: 0.134, f_NU: 4721, r_RMSE: 0.106, r_RRE: 2.527, r_RTE: 0.106
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 10, id1: 36, OV: 0.220, c_PIR: 0.750, f_IR: 0.467, f_OV: 0.999, f_RS: 0.109, f_NU: 4673, r_RMSE: 0.068, r_RRE: 1.471, r_RTE: 0.050
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 11, id1: 32, OV: 0.215, c_PIR: 0.520, f_IR: 0.246, f_OV: 0.934, f_RS: 0.195, f_NU: 2898, r_RMSE: 0.151, r_RRE: 1.535, r_RTE: 0.170
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 11, id1: 33, OV: 0.141, c_PIR: 0.293, f_IR: 0.078, f_OV: 0.770, f_RS: 0.233, f_NU: 3152, r_RMSE: 0.285
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 17, id1: 20, OV: 0.441, c_PIR: 0.590, f_IR: 0.590, f_OV: 0.910, f_RS: 0.112, f_NU: 3503, r_RMSE: 0.011, r_RRE: 1.099, r_RTE: 0.004
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 17, id1: 21, OV: 0.366, c_PIR: 0.543, f_IR: 0.523, f_OV: 0.935, f_RS: 0.122, f_NU: 3303, r_RMSE: 0.018, r_RRE: 1.054, r_RTE: 0.018
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 17, id1: 22, OV: 0.364, c_PIR: 0.527, f_IR: 0.475, f_OV: 0.917, f_RS: 0.141, f_NU: 3357, r_RMSE: 0.006, r_RRE: 1.221, r_RTE: 0.013
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 18, id1: 20, OV: 0.382, c_PIR: 0.508, f_IR: 0.619, f_OV: 0.937, f_RS: 0.108, f_NU: 3273, r_RMSE: 0.014, r_RRE: 2.290, r_RTE: 0.023
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 18, id1: 21, OV: 0.293, c_PIR: 0.387, f_IR: 0.500, f_OV: 0.916, f_RS: 0.146, f_NU: 3096, r_RMSE: 0.017, r_RRE: 2.582, r_RTE: 0.027
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 18, id1: 22, OV: 0.425, c_PIR: 0.617, f_IR: 0.615, f_OV: 0.963, f_RS: 0.105, f_NU: 3564, r_RMSE: 0.010, r_RRE: 0.931, r_RTE: 0.011
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 19, id1: 20, OV: 0.384, c_PIR: 0.461, f_IR: 0.634, f_OV: 0.927, f_RS: 0.147, f_NU: 2979
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 19, id1: 22, OV: 0.467, c_PIR: 0.559, f_IR: 0.657, f_OV: 0.968, f_RS: 0.103, f_NU: 3479, r_RMSE: 0.016, r_RRE: 2.016, r_RTE: 0.023
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 21, OV: 0.722, c_PIR: 0.570, f_IR: 0.714, f_OV: 0.988, f_RS: 0.090, f_NU: 3367
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 22, OV: 0.678, c_PIR: 0.566, f_IR: 0.645, f_OV: 0.958, f_RS: 0.113, f_NU: 3521, r_RMSE: 0.006, r_RRE: 1.543, r_RTE: 0.016
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 23, OV: 0.182, c_PIR: 0.246, f_IR: 0.423, f_OV: 0.736, f_RS: 0.428, f_NU: 2145, r_RMSE: 0.011, r_RRE: 2.787, r_RTE: 0.031
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 54, OV: 0.080, c_PIR: 0.195, f_IR: 0.224, f_OV: 0.792, f_RS: 0.622, f_NU: 2393, r_RMSE: 0.112, r_RRE: 2.776, r_RTE: 0.130
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 55, OV: 0.130, c_PIR: 0.504, f_IR: 0.530, f_OV: 0.964, f_RS: 0.142, f_NU: 2922, r_RMSE: 0.147, r_RRE: 3.484, r_RTE: 0.171
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 56, OV: 0.097, c_PIR: 0.441, f_IR: 0.467, f_OV: 0.932, f_RS: 0.147, f_NU: 2964, r_RMSE: 0.176, r_RRE: 4.125, r_RTE: 0.204
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 57, OV: 0.072, c_PIR: 0.410, f_IR: 0.395, f_OV: 0.970, f_RS: 0.184, f_NU: 2884, r_RMSE: 0.241
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 20, id1: 58, OV: 0.057, c_PIR: 0.141, f_IR: 0.142, f_OV: 0.751, f_RS: 0.529, f_NU: 2479, r_RMSE: 6.788
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 21, id1: 22, OV: 0.570, c_PIR: 0.445, f_IR: 0.600, f_OV: 0.932, f_RS: 0.118, f_NU: 3284
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 21, id1: 54, OV: 0.056, c_PIR: 0.031, f_IR: 0.027, f_OV: 0.383, f_RS: 0.723, f_NU: 2177, r_RMSE: 3.775
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 21, id1: 55, OV: 0.094, c_PIR: 0.359, f_IR: 0.395, f_OV: 0.945, f_RS: 0.171, f_NU: 2640, r_RMSE: 0.187, r_RRE: 4.395, r_RTE: 0.214
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 21, id1: 56, OV: 0.067, c_PIR: 0.180, f_IR: 0.223, f_OV: 0.820, f_RS: 0.299, f_NU: 2511, r_RMSE: 0.225
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 21, id1: 57, OV: 0.054, c_PIR: 0.187, f_IR: 0.188, f_OV: 0.897, f_RS: 0.365, f_NU: 2961, r_RMSE: 0.291
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 21, id1: 58, OV: 0.046, c_PIR: 0.234, f_IR: 0.169, f_OV: 0.901, f_RS: 0.351, f_NU: 2301, r_RMSE: 0.224
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 22, id1: 23, OV: 0.353, c_PIR: 0.375, f_IR: 0.513, f_OV: 0.842, f_RS: 0.312, f_NU: 3049
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 22, id1: 54, OV: 0.073, c_PIR: 0.203, f_IR: 0.288, f_OV: 0.889, f_RS: 0.363, f_NU: 2699, r_RMSE: 0.153, r_RRE: 3.980, r_RTE: 0.174
+[2026-03-29 19:22:32] [INFO] Home_2, id0: 22, id1: 55, OV: 0.116, c_PIR: 0.594, f_IR: 0.568, f_OV: 0.996, f_RS: 0.119, f_NU: 3005, r_RMSE: 0.193, r_RRE: 4.939, r_RTE: 0.221
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 22, id1: 56, OV: 0.101, c_PIR: 0.570, f_IR: 0.515, f_OV: 0.985, f_RS: 0.124, f_NU: 3244, r_RMSE: 0.233
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 22, id1: 57, OV: 0.073, c_PIR: 0.562, f_IR: 0.527, f_OV: 0.991, f_RS: 0.120, f_NU: 3202, r_RMSE: 0.295
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 22, id1: 58, OV: 0.043, c_PIR: 0.441, f_IR: 0.387, f_OV: 0.969, f_RS: 0.160, f_NU: 2679, r_RMSE: 0.280
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 23, id1: 24, OV: 0.346, c_PIR: 0.664, f_IR: 0.694, f_OV: 0.928, f_RS: 0.134, f_NU: 3412
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 23, id1: 54, OV: 0.088, c_PIR: 0.379, f_IR: 0.451, f_OV: 0.961, f_RS: 0.163, f_NU: 2700, r_RMSE: 0.269
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 23, id1: 55, OV: 0.089, c_PIR: 0.418, f_IR: 0.418, f_OV: 0.951, f_RS: 0.182, f_NU: 2832, r_RMSE: 0.270
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 23, id1: 56, OV: 0.090, c_PIR: 0.449, f_IR: 0.454, f_OV: 0.951, f_RS: 0.152, f_NU: 2942, r_RMSE: 0.241
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 23, id1: 57, OV: 0.058, c_PIR: 0.340, f_IR: 0.369, f_OV: 0.932, f_RS: 0.203, f_NU: 2832, r_RMSE: 0.463
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 23, id1: 58, OV: 0.028, c_PIR: 0.238, f_IR: 0.241, f_OV: 0.867, f_RS: 0.317, f_NU: 2315, r_RMSE: 0.290
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 29, id1: 41, OV: 0.058, c_PIR: 0.184, f_IR: 0.057, f_OV: 0.835, f_RS: 0.611, f_NU: 1854, r_RMSE: 1.035
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 29, id1: 42, OV: 0.067, c_PIR: 0.121, f_IR: 0.150, f_OV: 0.612, f_RS: 0.705, f_NU: 2479, r_RMSE: 0.557
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 29, id1: 45, OV: 0.034, c_PIR: 0.121, f_IR: 0.036, f_OV: 0.541, f_RS: 1.140, f_NU: 1631, r_RMSE: 5.167
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 29, id1: 47, OV: 0.057, c_PIR: 0.152, f_IR: 0.039, f_OV: 0.636, f_RS: 0.970, f_NU: 1718, r_RMSE: 1.448
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 29, id1: 48, OV: 0.101, c_PIR: 0.242, f_IR: 0.137, f_OV: 0.641, f_RS: 0.733, f_NU: 2055, r_RMSE: 1.458
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 29, id1: 49, OV: 0.104, c_PIR: 0.066, f_IR: 0.013, f_OV: 0.620, f_RS: 1.128, f_NU: 1688, r_RMSE: 3.862
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 32, id1: 36, OV: 0.236, c_PIR: 0.730, f_IR: 0.602, f_OV: 0.996, f_RS: 0.105, f_NU: 4119, r_RMSE: 0.033, r_RRE: 2.156, r_RTE: 0.039
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 33, id1: 36, OV: 0.225, c_PIR: 0.781, f_IR: 0.547, f_OV: 0.995, f_RS: 0.103, f_NU: 4001, r_RMSE: 0.111, r_RRE: 4.769, r_RTE: 0.185
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 34, id1: 35, OV: 0.113, c_PIR: 0.687, f_IR: 0.552, f_OV: 0.988, f_RS: 0.109, f_NU: 3709
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 35, id1: 36, OV: 0.528, c_PIR: 0.914, f_IR: 0.668, f_OV: 0.992, f_RS: 0.085, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 35, id1: 37, OV: 0.251, c_PIR: 0.723, f_IR: 0.407, f_OV: 0.968, f_RS: 0.121, f_NU: 4310, r_RMSE: 0.117, r_RRE: 1.374, r_RTE: 0.137
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 36, id1: 37, OV: 0.448, c_PIR: 0.875, f_IR: 0.598, f_OV: 0.988, f_RS: 0.100, f_NU: 4938
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 48, id1: 50, OV: 0.193, c_PIR: 0.809, f_IR: 0.660, f_OV: 0.990, f_RS: 0.091, f_NU: 4184, r_RMSE: 0.064, r_RRE: 1.130, r_RTE: 0.074
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 53, id1: 55, OV: 0.145, c_PIR: 0.430, f_IR: 0.517, f_OV: 0.806, f_RS: 0.255, f_NU: 3386, r_RMSE: 0.009, r_RRE: 1.258, r_RTE: 0.014
+[2026-03-29 19:22:33] [INFO] Home_2, id0: 53, id1: 59, OV: 0.123, c_PIR: 0.789, f_IR: 0.772, f_OV: 0.987, f_RS: 0.076, f_NU: 4092, r_RMSE: 0.023, r_RRE: 1.022, r_RTE: 0.030
+[2026-03-29 19:22:33] [INFO] Scene_name: sun3d-home_md-home_md_scan9_2012_sep_30
+[2026-03-29 19:22:33] [INFO]   Correspondence, , c_PIR: 0.490, c_PMR>0: 1.000, c_PMR>=0.1: 0.969, c_PMR>=0.3: 0.734, c_PMR>=0.5: 0.516, f_FMR: 0.922, f_IR: 0.424, f_OV: 0.895
+[2026-03-29 19:22:33] [INFO]   Registration, RR: 0.564, mean_RRE: 2.173, mean_RTE: 0.086, median_RRE: 2.016, median_RTE: 0.050
+[2026-03-29 19:22:33] [INFO] Hotel_1, id0: 1, id1: 11, OV: 0.250, c_PIR: 0.969, f_IR: 0.820, f_OV: 0.993, f_RS: 0.070, f_NU: 5000, r_RMSE: 0.028, r_RRE: 1.115, r_RTE: 0.034
+[2026-03-29 19:22:33] [INFO] Hotel_1, id0: 4, id1: 19, OV: 0.103, c_PIR: 0.805, f_IR: 0.477, f_OV: 0.980, f_RS: 0.107, f_NU: 5000, r_RMSE: 0.084, r_RRE: 2.015, r_RTE: 0.090
+[2026-03-29 19:22:33] [INFO] Hotel_1, id0: 19, id1: 20, OV: 0.278, c_PIR: 0.973, f_IR: 0.897, f_OV: 0.997, f_RS: 0.062, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_1, id0: 19, id1: 35, OV: 0.131, c_PIR: 0.707, f_IR: 0.529, f_OV: 0.866, f_RS: 0.516, f_NU: 4822, r_RMSE: 0.063, r_RRE: 2.968, r_RTE: 0.100
+[2026-03-29 19:22:33] [INFO] Hotel_1, id0: 29, id1: 30, OV: 0.253, c_PIR: 0.691, f_IR: 0.463, f_OV: 0.980, f_RS: 0.196, f_NU: 4004
+[2026-03-29 19:22:33] [INFO] Hotel_1, id0: 32, id1: 47, OV: 0.179, c_PIR: 0.879, f_IR: 0.646, f_OV: 0.994, f_RS: 0.090, f_NU: 5000, r_RMSE: 0.059, r_RRE: 2.323, r_RTE: 0.072
+[2026-03-29 19:22:33] [INFO] Scene_name: sun3d-hotel_uc-scan3
+[2026-03-29 19:22:33] [INFO]   Correspondence, , c_PIR: 0.837, c_PMR>0: 1.000, c_PMR>=0.1: 1.000, c_PMR>=0.3: 1.000, c_PMR>=0.5: 1.000, f_FMR: 1.000, f_IR: 0.639, f_OV: 0.968
+[2026-03-29 19:22:33] [INFO]   Registration, RR: 1.000, mean_RRE: 2.105, mean_RTE: 0.074, median_RRE: 2.169, median_RTE: 0.081
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 7, id1: 8, OV: 0.130, c_PIR: 0.793, f_IR: 0.497, f_OV: 0.993, f_RS: 0.110, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 10, id1: 29, OV: 0.148, c_PIR: 0.676, f_IR: 0.500, f_OV: 0.946, f_RS: 0.328, f_NU: 4607, r_RMSE: 0.074, r_RRE: 1.886, r_RTE: 0.100
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 28, id1: 29, OV: 0.209, c_PIR: 0.961, f_IR: 0.677, f_OV: 0.991, f_RS: 0.086, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 42, id1: 43, OV: 0.397, c_PIR: 0.973, f_IR: 0.830, f_OV: 0.986, f_RS: 0.066, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 46, id1: 47, OV: 0.237, c_PIR: 0.539, f_IR: 0.677, f_OV: 0.953, f_RS: 0.097, f_NU: 3619
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 46, id1: 56, OV: 0.039, c_PIR: 0.699, f_IR: 0.691, f_OV: 0.974, f_RS: 0.091, f_NU: 4489, r_RMSE: 0.095, r_RRE: 5.379, r_RTE: 0.109
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 49, id1: 50, OV: 0.277, c_PIR: 0.945, f_IR: 0.805, f_OV: 0.997, f_RS: 0.073, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 50, id1: 51, OV: 0.503, c_PIR: 0.941, f_IR: 0.777, f_OV: 0.994, f_RS: 0.075, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 50, id1: 52, OV: 0.293, c_PIR: 0.840, f_IR: 0.535, f_OV: 0.963, f_RS: 0.106, f_NU: 3971, r_RMSE: 0.077, r_RRE: 1.524, r_RTE: 0.087
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 50, id1: 54, OV: 0.383, c_PIR: 0.969, f_IR: 0.848, f_OV: 0.991, f_RS: 0.064, f_NU: 5000, r_RMSE: 0.022, r_RRE: 1.378, r_RTE: 0.033
+[2026-03-29 19:22:33] [INFO] Hotel_2, id0: 51, id1: 54, OV: 0.245, c_PIR: 0.785, f_IR: 0.571, f_OV: 0.970, f_RS: 0.108, f_NU: 3978, r_RMSE: 0.049, r_RRE: 2.010, r_RTE: 0.074
+[2026-03-29 19:22:33] [INFO] Scene_name: sun3d-hotel_umd-maryland_hotel1
+[2026-03-29 19:22:33] [INFO]   Correspondence, , c_PIR: 0.829, c_PMR>0: 1.000, c_PMR>=0.1: 1.000, c_PMR>=0.3: 1.000, c_PMR>=0.5: 1.000, f_FMR: 1.000, f_IR: 0.673, f_OV: 0.978
+[2026-03-29 19:22:33] [INFO]   Registration, RR: 1.000, mean_RRE: 2.435, mean_RTE: 0.081, median_RRE: 1.886, median_RTE: 0.087
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 14, id1: 15, OV: 0.294, c_PIR: 0.957, f_IR: 0.837, f_OV: 0.999, f_RS: 0.065, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 22, id1: 29, OV: 0.273, c_PIR: 0.973, f_IR: 0.810, f_OV: 0.997, f_RS: 0.072, f_NU: 5000, r_RMSE: 0.049, r_RRE: 1.421, r_RTE: 0.025
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 23, id1: 29, OV: 0.437, c_PIR: 0.953, f_IR: 0.866, f_OV: 0.999, f_RS: 0.063, f_NU: 5000, r_RMSE: 0.030, r_RRE: 1.235, r_RTE: 0.029
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 23, id1: 30, OV: 0.260, c_PIR: 0.922, f_IR: 0.792, f_OV: 0.994, f_RS: 0.074, f_NU: 5000, r_RMSE: 0.039, r_RRE: 2.012, r_RTE: 0.055
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 26, id1: 27, OV: 0.162, c_PIR: 0.750, f_IR: 0.738, f_OV: 0.992, f_RS: 0.088, f_NU: 4159
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 28, id1: 29, OV: 0.366, c_PIR: 0.937, f_IR: 0.931, f_OV: 0.999, f_RS: 0.052, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 28, id1: 30, OV: 0.246, c_PIR: 0.777, f_IR: 0.789, f_OV: 0.990, f_RS: 0.073, f_NU: 3992, r_RMSE: 0.027, r_RRE: 1.380, r_RTE: 0.029
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 29, id1: 30, OV: 0.604, c_PIR: 0.937, f_IR: 0.909, f_OV: 0.998, f_RS: 0.055, f_NU: 5000
+[2026-03-29 19:22:33] [INFO] Hotel_3, id0: 31, id1: 32, OV: 0.347, c_PIR: 0.965, f_IR: 0.860, f_OV: 0.998, f_RS: 0.064, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 32, id1: 33, OV: 0.467, c_PIR: 0.859, f_IR: 0.667, f_OV: 0.993, f_RS: 0.175, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 32, id1: 34, OV: 0.273, c_PIR: 0.492, f_IR: 0.319, f_OV: 0.764, f_RS: 0.415, f_NU: 4106, r_RMSE: 0.093, r_RRE: 1.713, r_RTE: 0.094
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 32, id1: 35, OV: 0.312, c_PIR: 0.621, f_IR: 0.444, f_OV: 0.967, f_RS: 0.128, f_NU: 4101, r_RMSE: 0.068, r_RRE: 2.302, r_RTE: 0.083
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 32, id1: 36, OV: 0.188, c_PIR: 0.496, f_IR: 0.334, f_OV: 0.797, f_RS: 0.376, f_NU: 4344, r_RMSE: 0.083, r_RRE: 3.659, r_RTE: 0.094
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 33, id1: 35, OV: 0.259, c_PIR: 0.816, f_IR: 0.566, f_OV: 0.969, f_RS: 0.103, f_NU: 3802, r_RMSE: 0.026, r_RRE: 1.036, r_RTE: 0.021
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 33, id1: 36, OV: 0.275, c_PIR: 0.867, f_IR: 0.685, f_OV: 0.988, f_RS: 0.087, f_NU: 4683, r_RMSE: 0.037, r_RRE: 0.637, r_RTE: 0.037
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 34, id1: 35, OV: 0.425, c_PIR: 0.957, f_IR: 0.888, f_OV: 0.998, f_RS: 0.057, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 34, id1: 36, OV: 0.366, c_PIR: 0.945, f_IR: 0.786, f_OV: 0.994, f_RS: 0.071, f_NU: 5000, r_RMSE: 0.042, r_RRE: 2.724, r_RTE: 0.060
+[2026-03-29 19:22:34] [INFO] Hotel_3, id0: 35, id1: 36, OV: 0.374, c_PIR: 0.898, f_IR: 0.678, f_OV: 0.985, f_RS: 0.085, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Scene_name: sun3d-hotel_umd-maryland_hotel3
+[2026-03-29 19:22:34] [INFO]   Correspondence, , c_PIR: 0.840, c_PMR>0: 1.000, c_PMR>=0.1: 1.000, c_PMR>=0.3: 1.000, c_PMR>=0.5: 0.889, f_FMR: 1.000, f_IR: 0.717, f_OV: 0.968
+[2026-03-29 19:22:34] [INFO]   Registration, RR: 1.000, mean_RRE: 1.812, mean_RTE: 0.053, median_RRE: 1.567, median_RTE: 0.046
+[2026-03-29 19:22:34] [INFO] Study, id0: 2, id1: 3, OV: 0.335, c_PIR: 0.937, f_IR: 0.779, f_OV: 0.998, f_RS: 0.076, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Study, id0: 4, id1: 46, OV: 0.139, c_PIR: 0.078, f_IR: 0.076, f_OV: 0.356, f_RS: 1.184, f_NU: 2893, r_RMSE: 1.195
+[2026-03-29 19:22:34] [INFO] Study, id0: 4, id1: 47, OV: 0.157, c_PIR: 0.379, f_IR: 0.205, f_OV: 0.760, f_RS: 0.358, f_NU: 2063, r_RMSE: 0.149, r_RRE: 6.971, r_RTE: 0.270
+[2026-03-29 19:22:34] [INFO] Study, id0: 4, id1: 48, OV: 0.186, c_PIR: 0.461, f_IR: 0.398, f_OV: 0.899, f_RS: 0.241, f_NU: 1611, r_RMSE: 0.046, r_RRE: 1.164, r_RTE: 0.032
+[2026-03-29 19:22:34] [INFO] Study, id0: 12, id1: 54, OV: 0.326, c_PIR: 0.496, f_IR: 0.409, f_OV: 0.737, f_RS: 0.465, f_NU: 4786, r_RMSE: 0.024, r_RRE: 0.995, r_RTE: 0.033
+[2026-03-29 19:22:34] [INFO] Study, id0: 13, id1: 54, OV: 0.124, c_PIR: 0.117, f_IR: 0.054, f_OV: 0.536, f_RS: 1.016, f_NU: 4345, r_RMSE: 4.155
+[2026-03-29 19:22:34] [INFO] Study, id0: 13, id1: 55, OV: 0.201, c_PIR: 0.898, f_IR: 0.573, f_OV: 0.994, f_RS: 0.102, f_NU: 4828, r_RMSE: 0.052, r_RRE: 1.978, r_RTE: 0.070
+[2026-03-29 19:22:34] [INFO] Study, id0: 14, id1: 18, OV: 0.168, c_PIR: 0.781, f_IR: 0.636, f_OV: 0.969, f_RS: 0.112, f_NU: 3069, r_RMSE: 0.053, r_RRE: 1.989, r_RTE: 0.086
+[2026-03-29 19:22:34] [INFO] Study, id0: 14, id1: 57, OV: 0.464, c_PIR: 0.734, f_IR: 0.598, f_OV: 0.964, f_RS: 0.232, f_NU: 4418, r_RMSE: 0.045, r_RRE: 1.626, r_RTE: 0.039
+[2026-03-29 19:22:34] [INFO] Study, id0: 16, id1: 61, OV: 0.107, c_PIR: 0.301, f_IR: 0.366, f_OV: 0.666, f_RS: 0.692, f_NU: 2194, r_RMSE: 0.105, r_RRE: 8.802, r_RTE: 0.248
+[2026-03-29 19:22:34] [INFO] Study, id0: 22, id1: 23, OV: 0.298, c_PIR: 0.820, f_IR: 0.660, f_OV: 0.969, f_RS: 0.098, f_NU: 4207
+[2026-03-29 19:22:34] [INFO] Study, id0: 22, id1: 24, OV: 0.217, c_PIR: 0.707, f_IR: 0.615, f_OV: 0.976, f_RS: 0.127, f_NU: 4042, r_RMSE: 0.037, r_RRE: 1.752, r_RTE: 0.081
+[2026-03-29 19:22:34] [INFO] Study, id0: 23, id1: 24, OV: 0.564, c_PIR: 0.863, f_IR: 0.774, f_OV: 0.993, f_RS: 0.111, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Study, id0: 39, id1: 48, OV: 0.191, c_PIR: 0.730, f_IR: 0.465, f_OV: 0.920, f_RS: 0.267, f_NU: 4125, r_RMSE: 0.149, r_RRE: 4.600, r_RTE: 0.206
+[2026-03-29 19:22:34] [INFO] Study, id0: 56, id1: 57, OV: 0.443, c_PIR: 0.941, f_IR: 0.810, f_OV: 0.992, f_RS: 0.075, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Scene_name: sun3d-mit_76_studyroom-76-1studyroom2
+[2026-03-29 19:22:34] [INFO]   Correspondence, , c_PIR: 0.616, c_PMR>0: 1.000, c_PMR>=0.1: 0.933, c_PMR>=0.3: 0.867, c_PMR>=0.5: 0.600, f_FMR: 1.000, f_IR: 0.494, f_OV: 0.849
+[2026-03-29 19:22:34] [INFO]   Registration, RR: 0.818, mean_RRE: 3.320, mean_RTE: 0.118, median_RRE: 1.978, median_RTE: 0.081
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 0, id1: 6, OV: 0.093, c_PIR: 0.445, f_IR: 0.265, f_OV: 0.842, f_RS: 0.190, f_NU: 3698, r_RMSE: 0.165, r_RRE: 7.388, r_RTE: 0.167
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 0, id1: 8, OV: 0.077, c_PIR: 0.648, f_IR: 0.434, f_OV: 0.972, f_RS: 0.146, f_NU: 4219, r_RMSE: 0.028, r_RRE: 1.677, r_RTE: 0.044
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 1, id1: 6, OV: 0.132, c_PIR: 0.922, f_IR: 0.544, f_OV: 0.966, f_RS: 0.102, f_NU: 4735, r_RMSE: 0.043, r_RRE: 2.543, r_RTE: 0.060
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 1, id1: 8, OV: 0.112, c_PIR: 0.824, f_IR: 0.659, f_OV: 0.973, f_RS: 0.095, f_NU: 4952, r_RMSE: 0.014, r_RRE: 0.976, r_RTE: 0.027
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 6, id1: 8, OV: 0.200, c_PIR: 0.937, f_IR: 0.669, f_OV: 0.991, f_RS: 0.085, f_NU: 5000, r_RMSE: 0.085, r_RRE: 2.411, r_RTE: 0.103
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 7, id1: 8, OV: 0.355, c_PIR: 0.984, f_IR: 0.834, f_OV: 0.993, f_RS: 0.070, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 14, id1: 15, OV: 0.761, c_PIR: 0.996, f_IR: 0.725, f_OV: 0.988, f_RS: 0.079, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 14, id1: 17, OV: 0.282, c_PIR: 0.922, f_IR: 0.695, f_OV: 0.991, f_RS: 0.088, f_NU: 5000, r_RMSE: 0.058, r_RRE: 1.542, r_RTE: 0.098
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 15, id1: 17, OV: 0.328, c_PIR: 0.984, f_IR: 0.760, f_OV: 0.992, f_RS: 0.077, f_NU: 5000, r_RMSE: 0.040, r_RRE: 1.627, r_RTE: 0.083
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 16, id1: 17, OV: 0.465, c_PIR: 0.969, f_IR: 0.650, f_OV: 0.994, f_RS: 0.085, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 19, id1: 21, OV: 0.184, c_PIR: 0.508, f_IR: 0.144, f_OV: 0.919, f_RS: 0.164, f_NU: 5000, r_RMSE: 0.323
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 20, id1: 21, OV: 0.317, c_PIR: 0.723, f_IR: 0.201, f_OV: 0.960, f_RS: 0.141, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 22, id1: 24, OV: 0.342, c_PIR: 0.883, f_IR: 0.646, f_OV: 0.973, f_RS: 0.094, f_NU: 4706, r_RMSE: 0.032, r_RRE: 1.036, r_RTE: 0.051
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 23, id1: 24, OV: 0.517, c_PIR: 0.863, f_IR: 0.649, f_OV: 0.970, f_RS: 0.091, f_NU: 4911
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 23, id1: 25, OV: 0.403, c_PIR: 0.785, f_IR: 0.609, f_OV: 0.982, f_RS: 0.103, f_NU: 4111, r_RMSE: 0.026, r_RRE: 3.567, r_RTE: 0.053
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 24, id1: 25, OV: 0.587, c_PIR: 0.816, f_IR: 0.630, f_OV: 0.981, f_RS: 0.095, f_NU: 4370
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 25, id1: 26, OV: 0.224, c_PIR: 0.730, f_IR: 0.532, f_OV: 0.966, f_RS: 0.117, f_NU: 3687
+[2026-03-29 19:22:34] [INFO] MIT_Lab, id0: 27, id1: 28, OV: 0.410, c_PIR: 0.898, f_IR: 0.694, f_OV: 0.984, f_RS: 0.083, f_NU: 5000
+[2026-03-29 19:22:34] [INFO] Scene_name: sun3d-mit_lab_hj-lab_hj_tea_nov_2_2012_scan1_erika
+[2026-03-29 19:22:34] [INFO]   Correspondence, , c_PIR: 0.824, c_PMR>0: 1.000, c_PMR>=0.1: 1.000, c_PMR>=0.3: 1.000, c_PMR>=0.5: 0.944, f_FMR: 1.000, f_IR: 0.574, f_OV: 0.969
+[2026-03-29 19:22:34] [INFO]   Registration, RR: 0.900, mean_RRE: 2.530, mean_RTE: 0.076, median_RRE: 1.677, median_RTE: 0.060
+[2026-03-29 19:22:34] [CRIT]   Coarse Matching, PIR: 0.750, PMR>0: 1.000, PMR>=0.1: 0.988, PMR>=0.3: 0.938, PMR>=0.5: 0.857
+[2026-03-29 19:22:34] [CRIT]     Kitchen, PIR: 0.686, PMR>0: 1.000, PMR>=0.1: 1.000, PMR>=0.3: 0.905, PMR>=0.5: 0.905
+[2026-03-29 19:22:34] [CRIT]     Home_1, PIR: 0.876, PMR>0: 1.000, PMR>=0.1: 1.000, PMR>=0.3: 1.000, PMR>=0.5: 1.000
+[2026-03-29 19:22:34] [CRIT]     Home_2, PIR: 0.490, PMR>0: 1.000, PMR>=0.1: 0.969, PMR>=0.3: 0.734, PMR>=0.5: 0.516
+[2026-03-29 19:22:34] [CRIT]     Hotel_1, PIR: 0.837, PMR>0: 1.000, PMR>=0.1: 1.000, PMR>=0.3: 1.000, PMR>=0.5: 1.000
+[2026-03-29 19:22:34] [CRIT]     Hotel_2, PIR: 0.829, PMR>0: 1.000, PMR>=0.1: 1.000, PMR>=0.3: 1.000, PMR>=0.5: 1.000
+[2026-03-29 19:22:34] [CRIT]     Hotel_3, PIR: 0.840, PMR>0: 1.000, PMR>=0.1: 1.000, PMR>=0.3: 1.000, PMR>=0.5: 0.889
+[2026-03-29 19:22:34] [CRIT]     Study, PIR: 0.616, PMR>0: 1.000, PMR>=0.1: 0.933, PMR>=0.3: 0.867, PMR>=0.5: 0.600
+[2026-03-29 19:22:34] [CRIT]     MIT_Lab, PIR: 0.824, PMR>0: 1.000, PMR>=0.1: 1.000, PMR>=0.3: 1.000, PMR>=0.5: 0.944
+[2026-03-29 19:22:34] [CRIT]   Fine Matching, FMR: 0.990, IR: 0.606, OV: 0.948, std: 0.026
+[2026-03-29 19:22:34] [CRIT]     Kitchen, FMR: 1.000, IR: 0.598
+[2026-03-29 19:22:34] [CRIT]     Home_1, FMR: 1.000, IR: 0.729
+[2026-03-29 19:22:34] [CRIT]     Home_2, FMR: 0.922, IR: 0.424
+[2026-03-29 19:22:34] [CRIT]     Hotel_1, FMR: 1.000, IR: 0.639
+[2026-03-29 19:22:34] [CRIT]     Hotel_2, FMR: 1.000, IR: 0.673
+[2026-03-29 19:22:34] [CRIT]     Hotel_3, FMR: 1.000, IR: 0.717
+[2026-03-29 19:22:34] [CRIT]     Study, FMR: 1.000, IR: 0.494
+[2026-03-29 19:22:34] [CRIT]     MIT_Lab, FMR: 1.000, IR: 0.574
+[2026-03-29 19:22:34] [CRIT]   Registration, RR: 0.902, mean_RRE: 2.276, mean_RTE: 0.071, median_RRE: 1.820, median_RTE: 0.059
+[2026-03-29 19:22:34] [CRIT]     Kitchen, RR: 0.938, mean_RRE: 2.434, mean_RTE: 0.060, median_RRE: 2.111, median_RTE: 0.048
+[2026-03-29 19:22:34] [CRIT]     Home_1, RR: 1.000, mean_RRE: 1.395, mean_RTE: 0.021, median_RRE: 1.155, median_RTE: 0.018
+[2026-03-29 19:22:34] [CRIT]     Home_2, RR: 0.564, mean_RRE: 2.173, mean_RTE: 0.086, median_RRE: 2.016, median_RTE: 0.050
+[2026-03-29 19:22:34] [CRIT]     Hotel_1, RR: 1.000, mean_RRE: 2.105, mean_RTE: 0.074, median_RRE: 2.169, median_RTE: 0.081
+[2026-03-29 19:22:34] [CRIT]     Hotel_2, RR: 1.000, mean_RRE: 2.435, mean_RTE: 0.081, median_RRE: 1.886, median_RTE: 0.087
+[2026-03-29 19:22:34] [CRIT]     Hotel_3, RR: 1.000, mean_RRE: 1.812, mean_RTE: 0.053, median_RRE: 1.567, median_RTE: 0.046
+[2026-03-29 19:22:34] [CRIT]     Study, RR: 0.818, mean_RRE: 3.320, mean_RTE: 0.118, median_RRE: 1.978, median_RTE: 0.081
+[2026-03-29 19:22:34] [CRIT]     MIT_Lab, RR: 0.900, mean_RRE: 2.530, mean_RTE: 0.076, median_RRE: 1.677, median_RTE: 0.060
+[2026-03-29 19:22:34] [INFO] Evaluation results successfully saved to /data/xichen/cg/CoFF/outputs/3DMatch/logs/eval-3DMatch_planar-20260329-192234.csv
