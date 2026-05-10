@@ -1,3 +1,4 @@
 src/core_courses/**/course_files/**/*.pptx filter=lfs diff=lfs merge=lfs -text
 src/core_courses/**/course_files/**/*.zip filter=lfs diff=lfs merge=lfs -text
 src/core_courses/**/course_files/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+src/core_courses/CS6382-Algorithm[[:space:]]Analysis[[:space:]]and[[:space:]]Game[[:space:]]Theory/course_files/lecture/3.[[:space:]]Online[[:space:]]Algorithms[[:space:]](new).pptx filter=lfs diff=lfs merge=lfs -text
