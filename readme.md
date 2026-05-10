@@ -11,7 +11,7 @@
     <h1 align="center">For CityU CS</h1>
     为香港城市大学计算机科学学生构建的标复习资料仓库。
 
-[😊 在线访问](https://shanechen0722.github.io/cityu-CS-review/) · [🤝 参与贡献](#-参与贡献) · [💡 获取帮助](https://github.com/SHANECHEN0722/cityu-CS-review/issues)
+[😊 在线访问](https://shanechen0722.github.io/cityu-CS-review/) · [🤝 参与贡献](#-参与贡献) · [🍲 视频讲解](https://v.douyin.com/ZopvEx3pjJg/) · [💡 获取帮助](https://github.com/SHANECHEN0722/cityu-CS-review/issues)
 </p>
 
 ## 📖 项目简介
