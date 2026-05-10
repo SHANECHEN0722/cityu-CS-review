@@ -70,9 +70,11 @@ cityu-CS-review/
 
 1. Fork 这个仓库
 2. 创建一个新分支：`git checkout -b add-notes`
-3. 提交你的改动：`git commit -m "Add CS2000 lecture notes"`
-4. 推送到分支：`git push origin add-notes`
-5. 创建 Pull Request
+3. 添加你的改动，并且更新json文件 `python3 tool/generate_courses_data.py`
+（或者一步执行更新json和step 4&5 `./run.s`）
+4. 提交你的改动：`git commit -m "Add CS2000 lecture notes"`
+5. 推送到分支：`git push origin add-notes`
+6. 创建 Pull Request
 
 ## 内容指南
 
