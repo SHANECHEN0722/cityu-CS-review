@@ -588,6 +588,16 @@ async function downloadCourseAsZip(course, buttonEl) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  const letterToggle = document.querySelector('[data-letter-toggle]');
+  const letterContent = document.querySelector('[data-letter-content]');
+  if (letterToggle && letterContent) {
+    letterToggle.addEventListener('click', () => {
+      const isCollapsed = letterContent.classList.toggle('is-collapsed');
+      letterToggle.classList.toggle('is-collapsed', isCollapsed);
+      letterToggle.setAttribute('aria-expanded', String(!isCollapsed));
+    });
+  }
+
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => filterCourses(e.target.value));

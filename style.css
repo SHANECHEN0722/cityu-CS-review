@@ -906,6 +906,144 @@ footer {
     line-height: 1.7;
 }
 
+.experience-letter-panel {
+    position: relative;
+    grid-column: 1 / -1;
+    z-index: 6;
+}
+
+.experience-letter-toggle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.experience-letter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(180, 139, 62, 0.35);
+    background: rgba(180, 139, 62, 0.08);
+    color: #f6f2e8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.experience-letter-button:hover {
+    transform: translateY(-1px);
+    background: rgba(180, 139, 62, 0.16);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.experience-letter-button:focus-visible {
+    outline: 2px solid rgba(180, 139, 62, 0.6);
+    outline-offset: 2px;
+}
+
+.experience-letter-caret {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.experience-letter-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 12px);
+    overflow: hidden;
+    max-height: 2000px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+    z-index: 7;
+}
+
+.experience-letter-content.is-collapsed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+}
+
+.experience-letter-button.is-collapsed .experience-letter-caret {
+    transform: rotate(-90deg);
+}
+
+.experience-letter {
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    border: 1px solid rgba(180, 139, 62, 0.25);
+    background: linear-gradient(135deg, rgba(30, 20, 8, 0.7), rgba(15, 18, 28, 0.9));
+    grid-column: 1 / -1;
+}
+
+.experience-letter-image-card {
+    padding: 16px;
+    background: rgba(10, 10, 10, 0.55);
+}
+
+.experience-letter-image {
+    display: block;
+    width: 100%;
+    max-width: 940px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    margin: 0 auto;
+}
+
+.experience-letter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 20%, rgba(180, 139, 62, 0.18), transparent 50%);
+    pointer-events: none;
+}
+
+.experience-letter > * {
+    position: relative;
+    z-index: 1;
+}
+
+.experience-letter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--cityu-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 14px;
+}
+
+.experience-letter-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.experience-letter p + p {
+    margin-top: 14px;
+}
+
+.experience-letter-signoff {
+    color: #f5f3eb;
+    font-weight: 600;
+}
+
+.experience-letter-signature {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .experience-link {
     color: var(--cityu-gold);
     text-decoration: none;
@@ -1039,6 +1177,14 @@ footer {
 
     .experience-course-grid {
         grid-template-columns: 1fr;
+    }
+
+    .experience-letter {
+        padding: 24px;
+    }
+
+    .experience-letter-title {
+        font-size: 1.6rem;
     }
 }
 

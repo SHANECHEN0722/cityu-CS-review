@@ -24,15 +24,29 @@
         </header>
 
         <section class="experience-grid">
-            <article class="experience-card" style="--delay: 0s">
-                <h2>Overview</h2>
-                <p>校内课程上完了，做一个简要经验总结，供参考。</p>
-            </article>
-
-            <article class="experience-card" style="--delay: 0.05s">
-                <h2>Course Mix</h2>
-                <p>我选的课程偏轻松，整体没遇到太多坑。以下按必修 / 选修整理。</p>
-            </article>
+            <div class="experience-letter-panel">
+                <div class="experience-letter-toggle">
+                    <button
+                        class="experience-letter-button is-collapsed"
+                        type="button"
+                        data-letter-toggle="1"
+                        aria-expanded="false"
+                        aria-controls="letterContent"
+                    >
+                        <span class="experience-letter-caret" aria-hidden="true">▾</span>
+                        点击展开给访问者的一封信
+                    </button>
+                </div>
+                <div class="experience-letter-content is-collapsed" data-letter-content="1" id="letterContent">
+                    <article class="experience-card experience-letter experience-letter-image-card" style="--delay: 0s">
+                        <img
+                            class="experience-letter-image"
+                            src="p/BDF7E3CA-8D41-4A6C-8F7B-852276E9A0B8.PNG"
+                            alt="Handwritten letter to visitors"
+                        />
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section class="experience-card experience-block" style="--delay: 0.15s">
@@ -135,5 +149,18 @@
             </div>
         </section>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('[data-letter-toggle]');
+            const content = document.querySelector('[data-letter-content]');
+            if (!toggle || !content) return;
+
+            toggle.addEventListener('click', () => {
+                const isCollapsed = content.classList.toggle('is-collapsed');
+                toggle.classList.toggle('is-collapsed', isCollapsed);
+                toggle.setAttribute('aria-expanded', String(!isCollapsed));
+            });
+        });
+    </script>
 </body>
 </html>
