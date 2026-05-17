@@ -846,6 +846,152 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Course experience page */
+.experience-page .container {
+    padding-bottom: 80px;
+}
+
+.experience-hero {
+    margin-bottom: 40px;
+}
+
+.experience-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+}
+
+.experience-back {
+    background: linear-gradient(135deg, #7a001f 0%, #a0002e 100%);
+    border: 1px solid rgba(133, 0, 41, 0.45);
+    box-shadow: 0 6px 18px rgba(133, 0, 41, 0.35);
+}
+
+.experience-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(133, 0, 41, 0.45);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.experience-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: riseIn 0.6s ease both;
+    animation-delay: var(--delay, 0s);
+}
+
+.experience-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.experience-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.experience-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.experience-link {
+    color: var(--cityu-gold);
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.experience-link:hover {
+    text-decoration: underline;
+}
+
+.experience-block {
+    margin-top: 24px;
+}
+
+.experience-block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.experience-tag {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.experience-course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.experience-course-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.experience-course-card ul {
+    padding-left: 18px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.experience-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--cityu-gold);
+    background: rgba(180, 139, 62, 0.1);
+    border: 1px solid rgba(180, 139, 62, 0.3);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin: 8px 0 6px;
+}
+
+.experience-meta {
+    margin-top: 16px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-card {
+        animation: none;
+    }
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     header h1 {
@@ -884,6 +1030,14 @@ footer {
     }
 
     .detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-actions {
+        justify-content: center;
+    }
+
+    .experience-course-grid {
         grid-template-columns: 1fr;
     }
 }

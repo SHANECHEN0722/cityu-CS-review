@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Experience | CityU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20251218b">
+</head>
+<body class="experience-page">
+    <div id="canvas-container"></div>
+    <div class="header-overlay"></div>
+
+    <div class="container">
+        <header class="experience-hero">
+            <div class="experience-actions">
+                <a class="course-link experience-back" href="index.html">← 返回列表</a>
+            </div>
+            <h1 class="review-title">Course <span class="highlight">Experience</span></h1>
+            <p class="subtitle">Personal notes and selection takeaways</p>
+            <p class="course-count">Based on my CityU MSc CS study path</p>
+        </header>
+
+        <section class="experience-grid">
+            <article class="experience-card" style="--delay: 0s">
+                <h2>Overview</h2>
+                <p>校内课程上完了，做一个简要经验总结，供参考。</p>
+            </article>
+
+            <article class="experience-card" style="--delay: 0.05s">
+                <h2>Course Mix</h2>
+                <p>我选的课程偏轻松，整体没遇到太多坑。以下按必修 / 选修整理。</p>
+            </article>
+        </section>
+
+        <section class="experience-card experience-block" style="--delay: 0.15s">
+            <div class="experience-block-header">
+                <h2>Electives</h2>
+                <span class="experience-tag">选修课</span>
+            </div>
+            <div class="experience-course-grid">
+                <div class="experience-course-card">
+                    <h3>CS6534 - AI Guided Study</h3>
+                    <ul>
+                        <li>强烈推荐，建议提前联系导师。</li>
+                        <li>工作量小，因为只有一学期，课程设计本质是为后续 project 做铺垫，项目前期调研。</li>
+                        <li>下学期可继续跟导师选 project 课程，想走科研的同学可以多和导师交流，有机会转mphil或者ra机会，甚至phd机会（phd这个前提是你自己有相关简历）。</li>
+                        <li>给分巨高、事情相对较少（前提是导师正常）夯爆了，无脑选。</li>
+                    </ul>
+                </div>
+                <div class="experience-course-card">
+                    <h3>CS5182 - Computer Graphics</h3>
+                    <ul>
+                        <li>我上过的课程第二轻松。</li>
+                        <li>课程内容少，project 很轻松。</li>
+                        <li>project内容：找一篇有 GitHub仓库的 paper，重新跑一遍训练即可，想高分就做点小改进（trick：可以找新论文，借鉴人家的idea，然后自己乱改改，就成自己的新改进了）。</li>
+                        <li>考试非常简单，只要你认真学了内容，基本就是奔满分考，题目非常基础。</li>
+                        <li>和 VR 课一起选会有部分复习内容重叠，能省一点工作量。</li>
+                    </ul>
+                </div>
+                <div class="experience-course-card">
+                    <h3>CS6290 - Privacy Enhancing Technologies</h3>
+                    <ul>
+                        <li>我上过的课第三轻松。</li>
+                        <li>私下和老师聊过天，人很亲和，课程设计合理，给分高，课上看着人很正经专业，但私下就像大几岁的phd师兄。</li>
+                        <li>quiz 可搜题，甚至不去教室也能完成，缺席了甚至还能补。</li>
+                        <li>project巨简单，LLM完全能胜任工作。</li>
+                        <li>答辩很水，期末开卷且非常简单，感觉结合cheat sheet，大家都能奔满分考，不用自己背内容很舒服，2张a4纸很够用，考试很友好，给到第二夯。</li>
+                        <li>综合来说性价比高，推荐选。</li>
+                    </ul>
+                </div>
+                <div class="experience-course-card">
+                    <h3>CS5188 - Virtual Reality Tech & Apns</h3>
+                    <ul>
+                        <li>我上过的课第四轻松。</li>
+                        <li>老师口音清楚。</li>
+                        <li>考试是我所有课里最简单的，但前提是你背了全部概念题，无计算--「背了即满分」。</li>
+                        <li>project 可能有一定难度。我当时负责的本地知识库的搭建与交互，建模部分不是我负责，所以不太了解。</li>
+                        <li>如果小组的同学都完全不会，还是有点吃力。建议找大佬或早点动手。</li>
+                        <li>蓝图参考：<a class="experience-link" href="https://blueprintue.com" target="_blank" rel="noopener noreferrer">https://blueprintue.com</a></li>
+                        <li>常规交互蓝图可直接参考，便于快速搭建。</li>
+                        <li>不确定整体 project 难度的同学，谨慎评估后再选。</li>
+                    </ul>
+                </div>
+                <div class="experience-course-card">
+                    <h3>CS5491 - Artificial Intelligence</h3>
+                    <ul>
+                        <li>师兄师姐普遍推荐。</li>
+                        <li>需要抢课，我当时点错按钮，点回来显示没名额了。</li>
+                        <li>课程中途发现还剩一个名额，于是课程中途申请加入，老师一开始不同意，后来我发简历给他证明有相关经验才同意。</li>
+                        <li>老师风格：听朋友说比较“严格”，但我个人在教室的体验还行。</li>
+                        <li>考试简单到超乎想象，某种程度比vr还简单，因为它真考原题或者简单改编而且是开卷，不需要你背，带你需要的资料上考场就完事，考试建议复习tutorial，考题基本是原题或改编题。</li>
+                        <li>期中据说完全出的之前的原题，后来被一个同学举报，老师差点让全班重考，不知道后面的学弟学妹还能不能享受到“原题福利”。</li>
+                        <li>project可自选题。我用以前的AI相关项目交的作业，几次报告给分都挺高的。</li>
+                        <li>性价比高，尤其适合有 AI相关经验的同学，能省一个project工作量，而且相比其它课程你随便水project和提交以前做的有意义的project还能拿高分。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-card experience-block" style="--delay: 0.2s">
+            <div class="experience-block-header">
+                <h2>Required Courses</h2>
+                <span class="experience-tag">必修课</span>
+            </div>
+            <div class="experience-course-grid">
+                <div class="experience-course-card">
+                    <h3>CS5351 - Software Engineering</h3>
+                    <div class="experience-pill">老师</div>
+                    <ul>
+                        <li>上课会有些单词讲错，我一开始以为是口音，后来发现是确实说错。对英语一般的同学来说听着会有点吃力。</li>
+                        <li>老师人还不错，整体态度较好。</li>
+                    </ul>
+                    <div class="experience-pill">考试</div>
+                    <ul>
+                        <li>期中考试：可以查题，监管不严，但仍有难度，很多简答题要写文字，题量偏多，做不完很正常。</li>
+                        <li>第二次考试：难度显著下降，但为笔试，没机考那么“水”。</li>
+                        <li>期末考试：开卷，难度中等。有前期做的 cheat sheet 很好用，结合复习可以拿高分，挂科风险不大。</li>
+                    </ul>
+                    <div class="experience-pill">项目</div>
+                    <ul>
+                        <li>选好队友很关键，尽量早点开工。</li>
+                        <li>如果队友不够主动，建议自己带头组织分工，项目工作量不小。</li>
+                    </ul>
+                </div>
+                <div class="experience-course-card">
+                    <h3>CS5222 - Computer Networks & Internets || CS5481 - Data Engineering</h3>
+                    <ul>
+                        <li>必修课，选它们没太多可补充的。</li>
+                        <li>写完第一门必修课后，写到第二门时发现没必要展开，所以后面都略了，但为了严谨仍把必修课列出来。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
