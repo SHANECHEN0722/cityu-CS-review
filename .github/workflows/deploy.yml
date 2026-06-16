@@ -1,0 +1,46 @@
+name: Deploy GitHub Pages with LFS
+
+# 当你向 main 分支推送代码时，自动触发此流水线
+on:
+  push:
+    branches:
+      - main
+
+# 配置流水线需要的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 如果有新的推送，自动取消正在运行的旧流水线，避免浪费资源
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 拉取仓库代码
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true # ⭐ 核心：开启 Git LFS 支持，确保下载真实的 PDF 文件而不是文本指针
+
+      # 2. 初始化 GitHub Pages 配置
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 3. 将当前目录下的所有静态文件打包
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # 部署根目录下的所有内容
+
+      # 4. 正式部署到 GitHub Pages 站点
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
