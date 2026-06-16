@@ -76,6 +76,8 @@ cityu-CS-review/
 5. 推送到分支：`git push origin add-notes`
 6. 创建 Pull Request
 
+如果考虑用git lfs上传文件，记得用git action方式部署网页
+
 ## 内容指南
 
 - 确保内容准确和有用
