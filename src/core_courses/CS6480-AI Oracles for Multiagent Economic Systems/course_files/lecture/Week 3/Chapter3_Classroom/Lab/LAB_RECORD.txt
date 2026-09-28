@@ -1,0 +1,37 @@
+CS6480 Chapter 3 lab record
+Use course synthetic data only in external AI tools.
+
+Pair / group: __________________    Date: __________________
+Tool/model used (or instructor-supplied offline candidate): __________________
+
+TASK A: INDIVIDUAL DECISION
+My prediction before using the tool:
+Recommended bid:
+Oracle's claimed slot / CPC / utility:
+Verified slot / CPC / utility:
+Best permitted bids and utility:
+Recommendation's shortfall from the best permitted utility:
+Can I conclude that everyone is at equilibrium? Explain:
+
+TASK B: ALL-AGENT VERIFICATION
+Profile P, maximum improvement for A / B / C / D:
+Profile P, verdict and a witness deviation if it fails:
+Profile Q, maximum improvement for A / B / C / D:
+Profile Q, verdict:
+Exact permitted bid set, tie rule and evaluation CTRs:
+What this test does not establish:
+
+TASK C: PREDICTED VERSUS ENVIRONMENT PAYOFFS
+Predicted CTRs:
+Chosen bid under predicted CTRs:
+Predicted utility / environment utility:
+Best environment utility / decision shortfall:
+Why can a valid predicted best response underperform in the environment?
+
+EXIT TICKET
+1. One sentence distinguishing a profitable deviation from a best response:
+2. One sentence explaining what makes a profile a Nash equilibrium:
+3. One sentence stating the limits of our verification:
+
+Attach or identify the saved JSON/CSV result files and actual oracle response.
+This record is a classroom exercise. The instructor will announce any assessed submission separately.
