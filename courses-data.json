@@ -1,5 +1,5 @@
 {
-  "courses_count": 13,
+  "courses_count": 14,
   "courses": [
     {
       "id": " CS5222-Computer Networks & Internets",
@@ -55261,6 +55261,195 @@
                 "size": 85
               }
             ]
+          }
+        },
+        "files": []
+      }
+    },
+    {
+      "id": "CS6480-AI Oracles for Multiagent Economic Systems",
+      "folder": "CS6480-AI Oracles for Multiagent Economic Systems",
+      "code": "CS6480",
+      "name": "AI Oracles for Multiagent Economic Systems",
+      "intro_html": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/courses.html",
+      "files": {
+        "folders": {
+          "course_files": {
+            "folders": {
+              "lecture": {
+                "folders": {
+                  "Week 1": {
+                    "folders": {},
+                    "files": [
+                      {
+                        "name": "CS6480_Chapter1_Textbook.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 1/CS6480_Chapter1_Textbook.pdf",
+                        "size": 569323
+                      },
+                      {
+                        "name": "CS6480_Week1_Expanded_Aligned_v2.pptx",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 1/CS6480_Week1_Expanded_Aligned_v2.pptx",
+                        "size": 249932
+                      },
+                      {
+                        "name": "index.html",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 1/index.html",
+                        "size": 561
+                      }
+                    ]
+                  },
+                  "Week 2": {
+                    "folders": {},
+                    "files": [
+                      {
+                        "name": "CS6480_Problem_Set_1_Revised_Choose_5_of_6.docx",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 2/CS6480_Problem_Set_1_Revised_Choose_5_of_6.docx",
+                        "size": 40865
+                      },
+                      {
+                        "name": "CS6480_Week2_Chapter2.pptx",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 2/CS6480_Week2_Chapter2.pptx",
+                        "size": 292926
+                      },
+                      {
+                        "name": "CS6480_Week2_Chapter2_Complete_v5.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 2/CS6480_Week2_Chapter2_Complete_v5.pdf",
+                        "size": 483099
+                      },
+                      {
+                        "name": "index.html",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 2/index.html",
+                        "size": 680
+                      }
+                    ]
+                  },
+                  "Week 3": {
+                    "folders": {
+                      "Chapter3_Classroom": {
+                        "folders": {
+                          "Lab": {
+                            "folders": {},
+                            "files": [
+                              {
+                                "name": "chapter3_lab.py",
+                                "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/Lab/chapter3_lab.py",
+                                "size": 11724
+                              },
+                              {
+                                "name": "index.html",
+                                "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/Lab/index.html",
+                                "size": 615
+                              },
+                              {
+                                "name": "LAB_RECORD.txt",
+                                "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/Lab/LAB_RECORD.txt",
+                                "size": 1474
+                              },
+                              {
+                                "name": "ORACLE_PROMPTS.txt",
+                                "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/Lab/ORACLE_PROMPTS.txt",
+                                "size": 2526
+                              },
+                              {
+                                "name": "START_LAB_MAC.command",
+                                "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/Lab/START_LAB_MAC.command",
+                                "size": 450
+                              },
+                              {
+                                "name": "START_LAB_WINDOWS.bat",
+                                "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/Lab/START_LAB_WINDOWS.bat",
+                                "size": 140
+                              }
+                            ]
+                          }
+                        },
+                        "files": [
+                          {
+                            "name": "index.html",
+                            "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/index.html",
+                            "size": 395
+                          },
+                          {
+                            "name": "START_HERE.txt",
+                            "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Chapter3_Classroom/START_HERE.txt",
+                            "size": 2465
+                          }
+                        ]
+                      }
+                    },
+                    "files": [
+                      {
+                        "name": "CS6480_Chapter3_Lecture.pptx",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/CS6480_Chapter3_Lecture.pptx",
+                        "size": 203554
+                      },
+                      {
+                        "name": "CS6480_Chapter3_Notes.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/CS6480_Chapter3_Notes.pdf",
+                        "size": 346537
+                      },
+                      {
+                        "name": "CS6480_Chapter3_Textbook.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/CS6480_Chapter3_Textbook.pdf",
+                        "size": 495052
+                      },
+                      {
+                        "name": "index.html",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/index.html",
+                        "size": 798
+                      },
+                      {
+                        "name": "Overview of Course Plan L0.pptx",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 3/Overview of Course Plan L0.pptx",
+                        "size": 73808
+                      }
+                    ]
+                  },
+                  "Week 4": {
+                    "folders": {},
+                    "files": [
+                      {
+                        "name": "CS6480_Chapter4.pptx",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 4/CS6480_Chapter4.pptx",
+                        "size": 230554
+                      },
+                      {
+                        "name": "CS6480_Chapter4_Textbook.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 4/CS6480_Chapter4_Textbook.pdf",
+                        "size": 109195
+                      },
+                      {
+                        "name": "index.html",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 4/index.html",
+                        "size": 527
+                      }
+                    ]
+                  },
+                  "Week 5": {
+                    "folders": {},
+                    "files": [
+                      {
+                        "name": "CS6480_Chapter5_Complete.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 5/CS6480_Chapter5_Complete.pdf",
+                        "size": 140897
+                      },
+                      {
+                        "name": "CS6480_Chapter5_Textbook.pdf",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 5/CS6480_Chapter5_Textbook.pdf",
+                        "size": 115294
+                      },
+                      {
+                        "name": "index.html",
+                        "path": "src/core_courses/CS6480-AI Oracles for Multiagent Economic Systems/course_files/lecture/Week 5/index.html",
+                        "size": 543
+                      }
+                    ]
+                  }
+                },
+                "files": []
+              }
+            },
+            "files": []
           }
         },
         "files": []

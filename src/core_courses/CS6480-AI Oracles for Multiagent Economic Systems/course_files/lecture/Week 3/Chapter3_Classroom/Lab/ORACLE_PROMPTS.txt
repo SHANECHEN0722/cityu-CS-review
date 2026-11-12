@@ -1,0 +1,16 @@
+CS6480 CHAPTER 3: ORACLE PROMPTS
+Use synthetic course data only. No student name, ID or personal data is needed.
+Save the actual response, tool/model name and date. Different tools may respond differently.
+The Python checker does not call an AI API. It independently evaluates proposed bids.
+
+TASK A: A SINGLE ADVERTISER
+I am advertiser A in a one-shot, unweighted GSP auction with four advertisers and three positions. My value per click is 10. The other bids stay fixed: B=8, C=6, D=4. The supplied CTR vector is (0.10, 0.06, 0.03). Every advertiser may bid any integer from 0 to 12 inclusive. Rank by descending bid. Break equal-bid ties in order A before B before C before D. Each winner pays the next ranked bid per click. There is no reserve, budget or quality weighting. An unallocated advertiser gets utility zero. Expected utility is CTR of the assigned slot times (own value minus CPC). Recommend a permitted bid for A to maximize expected utility. Give the slot, CPC, expected utility and any tied best bids. State the assumptions. Do not change rival bids or claim that the resulting whole profile is an equilibrium merely because A has a best response.
+
+TASK B: CANDIDATE OUTCOME (OPTIONAL SECOND AI CALL)
+Use the same GSP rules and integer bid grid 0..12. For this classroom verification task, the evaluator knows all four values: A=10, B=8, C=6, D=4. Environment CTRs are (0.10, 0.06, 0.03). Compare candidate P=(7,8,6,4) and candidate Q=(10,6,4,2), in A B C D order. For each profile, hold the other bids fixed separately for each advertiser. Search all permitted unilateral bids, report each advertiser's current utility, best attainable utility and maximum gain. State whether the profile is a pure Nash equilibrium of this specified finite game. Do not claim convergence, uniqueness, truthfulness or optimal social welfare from this check.
+
+TASK C: PREDICTION ERROR
+Repeat Task A using the supplied predicted CTRs (0.10, 0.04, 0.03). Keep the same rival bids and bid grid. If several bids maximize predicted utility, choose the smallest bid. Recommend a bid using only those predicted CTRs. Then let the independent checker evaluate this recommendation using environment CTRs (0.10, 0.06, 0.03). Record the difference between predicted and environment-based evaluation.
+
+OFFLINE FALLBACK
+If no AI service is available, use bid 8 as an instructor-supplied candidate for Task A, and then optionally compare bid 7. Label these as supplied candidates, not actual AI outputs. All verification tasks run offline.

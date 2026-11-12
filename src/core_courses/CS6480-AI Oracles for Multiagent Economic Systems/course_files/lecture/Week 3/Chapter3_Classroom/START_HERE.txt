@@ -1,0 +1,52 @@
+CS6480 CHAPTER 3: STRATEGIC DECISIONS WITH AI ORACLES
+Xiaotie Deng, Chair Professor of Multiagent Economics
+City University of Hong Kong
+Copyright © 2026 Xiaotie Deng. City University of Hong Kong.
+
+LECTURE ORDER
+Open CS6480_Chapter3_3Hour_Reviewed.pptx in PowerPoint.
+Use Presenter View to see teaching notes, timing, answers and source links.
+
+Slides 1–16: Section 3.1 Concepts, minutes 0–50.
+Slide 17: ten-minute break.
+Slides 18–31: Section 3.2 Formal model, minutes 60–110.
+Slide 32: ten-minute break.
+Slides 33–47: Section 3.3 Oracle lab, minutes 120–180.
+Slides 48–51: optional reading, worked reference tables and lab help.
+
+LAB STARTUP
+Mac: open Lab/START_LAB_MAC.command.
+Windows: open Lab/START_LAB_WINDOWS.bat.
+Python 3.8 or later is required. No third-party Python packages or AI API keys are needed.
+The Windows launcher requires checking on the Windows classroom machine before teaching.
+Startup should display READY: 18 Chapter 3 tests passed.
+At Select:, enter a menu number and press Return. This is normal, not a stalled program.
+
+TASK ORDER
+1: baseline.
+2: Task A. Then enter the AI-recommended integer bid for A.
+3: Task B, candidate P.
+4: Task B, candidate Q.
+5: Task C, predicted versus environment CTRs.
+0: exit.
+
+Open Lab/ORACLE_PROMPTS.txt to copy prompts into an available AI tool.
+Record actual responses. Use synthetic data only, without student names or IDs.
+If no AI service is available, use the clearly labelled instructor-supplied fallback candidate.
+The checker does not call ChatGPT or DeepSeek. It independently checks proposed decisions.
+Use Lab/LAB_RECORD.txt for the worksheet. Each run saves JSON and CSV in Lab/outputs.
+No assessed deadline or online submission destination is set in this teaching package.
+
+TROUBLESHOOTING
+If double-clicking fails, ask the TA to open a terminal in the Lab folder and run:
+  Mac: python3 chapter3_lab.py
+  Windows: py -3 chapter3_lab.py
+If Python is unavailable or any startup test fails, use a working partner machine.
+Do not disable operating-system security to run the lab.
+
+MODEL BOUNDARY
+Four advertisers, three positions, unweighted GSP, no reserve or budgets.
+Values (10,8,6,4), environment CTRs (0.10,0.06,0.03).
+All players may bid any integer from 0 to 12. Ties follow A,B,C,D.
+Each unilateral scan fixes every other bid. Equilibrium verdicts concern this finite game.
+The lab does not compute FLNE or prove convergence, uniqueness, or general welfare optimality.
